@@ -385,6 +385,8 @@ void loop() {
 
 }
 
+//funcion de variables
+
 void setOffset(int ax_, int ay_, int az_, int gx_, int gy_, int gz_, MPU6050 h) {
   h.setXAccelOffset(ax_);
   h.setYAccelOffset(ay_);
