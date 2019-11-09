@@ -28,13 +28,13 @@ const uint64_t pipe = 0xE8E8F0F0E1LL;
 //----------- pines de entrada o salida
 
 
-int mpu1 = 2;
-int mpu2 = 3;
-int mpu3 = 4;
-int mpu4 = 5;
-int mpu5 = 6;
-int mpu6 = 9;
-int mpu7 = 10;
+int mpu1 = 2;   //Pie Derecho
+int mpu2 = 3;  //Pierna Derecha
+int mpu3 = 4;  //Femur Derecho
+int mpu4 = 5;  //Pie Izquierdo
+int mpu5 = 6;  //Pierna Izquierda
+int mpu6 = 9;  //Femur Izquierdo
+int mpu7 = 10;  //Cadera
 
 const int pinCE = 7;
 const int pinCSN = 8;
@@ -46,13 +46,13 @@ const int pinCSN = 8;
 
 //---------- Objetos de Clases
 
-MPU6050 sensor1;
-MPU6050 sensor2;
-MPU6050 sensor3;
-MPU6050 sensor4;
-MPU6050 sensor5;
-MPU6050 sensor6;
-MPU6050 sensor7;
+MPU6050 sensor1;  //Pie Derecho
+MPU6050 sensor2;  //Pierna Derecha
+MPU6050 sensor3;  //Femur Derecho
+MPU6050 sensor4;  //Pie Izquierdo
+MPU6050 sensor5;  //Pierna Izquierda
+MPU6050 sensor6;  //Femur Izquierdo
+MPU6050 sensor7;  //Cadera
 
 RF24 radio(pinCE, pinCSN);
 
