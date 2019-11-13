@@ -22,7 +22,7 @@
 /// SIETE ///
 #define OFFSETS7  -4359,    -159,    1169,     -57,    -104,    -229 
 
-
+// llave de canal de cominicacion
 const uint64_t pipe = 0xE8E8F0F0E1LL;
 
 //----------- pines de entrada o salida
@@ -36,6 +36,7 @@ int mpu5 = 6;  //Pierna Izquierda
 int mpu6 = 9;  //Femur Izquierdo
 int mpu7 = 10;  //Cadera
 
+//----- Pines para el transmisor
 const int pinCE = 7;
 const int pinCSN = 8;
 
@@ -428,7 +429,7 @@ void loop() {
   Serial.print(" X7: ");
   Serial.print(datos[12]); 
   Serial.print(" Y7: ");
-  Serial.print(datos[13]);
+  Serial.println(datos[13]);
 
   radio.write(datos, 28);
 
