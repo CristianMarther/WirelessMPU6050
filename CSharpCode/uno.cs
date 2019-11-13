@@ -58,8 +58,22 @@ public class MoverCuerpo : MonoBehaviour
 
         a = float.Parse(unoL[0]);
         b = float.Parse(unoL[1]);
+        c = float.Parse(unoL[2]);
+        d = float.Parse(unoL[3]);
+        e = float.Parse(unoL[4]);
+        f = float.Parse(unoL[5]);
+        g = float.Parse(unoL[6]);
+        h = float.Parse(unoL[7]);
+        i = float.Parse(unoL[8]);
+        j = float.Parse(unoL[9]);
+        k = float.Parse(unoL[0]);
+        l = float.Parse(unoL[1]);
+        m = float.Parse(unoL[2]);
+        n = float.Parse(unoL[3]);
 
-        if (a != double.NaN && b != double.NaN)
+        if (a != double.NaN && b != double.NaN && c != double.NaN && d != double.NaN && e != double.NaN
+            && f != double.NaN && g != double.NaN && h != double.NaN && i != double.NaN && j != double.NaN
+            && k != double.NaN && l != double.NaN && m != double.NaN && n != double.NaN)
         {
             //Debug.Log(a);
 
