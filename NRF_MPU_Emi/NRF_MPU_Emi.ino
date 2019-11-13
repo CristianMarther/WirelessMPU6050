@@ -119,7 +119,7 @@ void setup() {
   Wire.begin();
 
   radio.begin();
-  radio.setPayloadSize(50);
+  radio.setPayloadSize(30);
   radio.openWritingPipe(pipe);
 
   pinMode(mpu1, OUTPUT);

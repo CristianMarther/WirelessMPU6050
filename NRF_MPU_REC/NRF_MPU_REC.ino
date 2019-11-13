@@ -19,7 +19,7 @@ void setup() {
   Serial.begin(230400);
 
   radio.begin();
-  radio.setPayloadSize(50);
+  radio.setPayloadSize(30);
   radio.openReadingPipe(1, pipe);
   radio.startListening();
 
