@@ -227,8 +227,8 @@ void loop() {
   ang_y1 = 0.98*(ang_y_prev1+(gy1/131)*dt1) + 0.02*accel_ang_y1;
   
   
-  //ang_x_prev1=ang_x1;
-  //ang_y_prev1=ang_y1;
+  ang_x_prev1=ang_x1;
+  ang_y_prev1=ang_y1;
 
   datos[0] = (int) ang_x1;
   datos[1] = (int) ang_y1;
@@ -256,8 +256,8 @@ void loop() {
   ang_y2 = 0.98*(ang_y_prev2+(gy2/131)*dt2) + 0.02*accel_ang_y2;
   
   
-  //ang_x_prev2=ang_x2;
-  //ang_y_prev2=ang_y2;
+  ang_x_prev2=ang_x2;
+  ang_y_prev2=ang_y2;
 
   datos[2] = (int) ang_x2;
   datos[3] = (int) ang_y2;
@@ -284,8 +284,8 @@ void loop() {
   ang_y3 = 0.98*(ang_y_prev3+(gy3/131)*dt3) + 0.02*accel_ang_y3;
   
   
-  //ang_x_prev3=ang_x3;
-  //ang_y_prev3=ang_y3;
+  ang_x_prev3=ang_x3;
+  ang_y_prev3=ang_y3;
 
   datos[4] = (int) ang_x3;
   datos[5] = (int) ang_y3;
@@ -312,8 +312,8 @@ void loop() {
   ang_y4 = 0.98*(ang_y_prev4+(gy4/131)*dt4) + 0.02*accel_ang_y4;
   
   
-  //ang_x_prev4=ang_x4;
-  //ang_y_prev4=ang_y4;
+  ang_x_prev4=ang_x4;
+  ang_y_prev4=ang_y4;
 
   datos[6] = (int) ang_x4;
   datos[7] = (int) ang_y4;
@@ -340,8 +340,8 @@ void loop() {
   ang_y5 = 0.98*(ang_y_prev5+(gy5/131)*dt5) + 0.02*accel_ang_y5;
   
   
-  //ang_x_prev5=ang_x5;
-  //ang_y_prev5=ang_y5;
+  ang_x_prev5=ang_x5;
+  ang_y_prev5=ang_y5;
 
   datos[8] = (int) ang_x5;
   datos[9] = (int) ang_y5;
@@ -368,8 +368,8 @@ void loop() {
   ang_y6 = 0.98*(ang_y_prev6+(gy6/131)*dt6) + 0.02*accel_ang_y6;
   
   
-  //ang_x_prev6=ang_x6;
-  //ang_y_prev6=ang_y6;
+  ang_x_prev6=ang_x6;
+  ang_y_prev6=ang_y6;
 
   datos[10] = (int) ang_x6;
   datos[11] = (int) ang_y6;
@@ -397,8 +397,8 @@ void loop() {
   ang_y7 = 0.98*(ang_y_prev7+(gy7/131)*dt7) + 0.02*accel_ang_y7;
   
   
-  //ang_x_prev7=ang_x7;
-  //ang_y_prev7=ang_y7;
+  ang_x_prev7=ang_x7;
+  ang_y_prev7=ang_y7;
   datos[12] = (int) ang_x7;
   datos[13] = (int) ang_y7;
 
