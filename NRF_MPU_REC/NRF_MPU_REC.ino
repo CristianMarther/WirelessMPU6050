@@ -13,6 +13,7 @@ int datos[14];
 
 RF24 radio(pinCE, pinCSN);
 
+long timer = 0;
 
 void setup() {
   
@@ -26,7 +27,11 @@ void setup() {
 }
 
 void loop() {
+
+
   /* code */
+
+  //if(millis() - timer < 2000){ 
 	if(radio.available()){
 
 		radio.read(datos, 28);
@@ -59,5 +64,6 @@ void loop() {
 		Serial.print(",");
 		Serial.println(datos[13]);
 
+	//}
 	}
 }

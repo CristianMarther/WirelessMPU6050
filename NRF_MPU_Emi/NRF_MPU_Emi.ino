@@ -138,6 +138,7 @@ void setup() {
   digitalWrite(mpu5, HIGH);
   digitalWrite(mpu6, HIGH);
   digitalWrite(mpu7, HIGH);
+  
   sensor1.initialize();
   setOffset(OFFSETS1, sensor1);
 
@@ -200,6 +201,8 @@ void setup() {
   digitalWrite(mpu7, LOW);
   sensor7.initialize();
   setOffset(OFFSETS7, sensor7);
+
+  
 
 }
 
@@ -384,57 +387,59 @@ void loop() {
   digitalWrite(mpu7, LOW);
   sensor7.getAcceleration(&ax7, &ay7, &az7);
   sensor7.getRotation(&gx7, &gy7, &gz7);
-  
-  dt7 = (millis()-tiempo_prev7)/1000.0;
-  tiempo_prev7=millis();
-  
-  //Calcular los ángulos con acelerometro
-  float accel_ang_x7=atan(ay7/sqrt(pow(ax7,2) + pow(az7,2)))*(180.0/3.14);
-  float accel_ang_y7=atan(-ax7/sqrt(pow(ay7,2) + pow(az7,2)))*(180.0/3.14);
-  
-  //Calcular angulo de rotación con giroscopio y filtro complemento  
-  ang_x7 = 0.98*(ang_x_prev7+(gx7/131)*dt7) + 0.02*accel_ang_x7;
-  ang_y7 = 0.98*(ang_y_prev7+(gy7/131)*dt7) + 0.02*accel_ang_y7;
-  
-  
-  ang_x_prev7=ang_x7;
-  ang_y_prev7=ang_y7;
-  datos[12] = (int) ang_x7;
-  datos[13] = (int) ang_y7;
 
-  Serial.print("X1: ");
-  Serial.print(datos[0]); 
-  Serial.print(" Y1: ");
+  float az_m_s2 = az7 * (9.81/16384.0);
+  //float gz_deg_s = gz7 * (250.0/32768.0);
+
+  //Serial.print("X1: ");
+  Serial.print(datos[0]);
+  Serial.print(","); 
+  //Serial.print(" Y1: ");
   Serial.print(datos[1]);
-  Serial.print(" X2: ");
+  Serial.print(",");
+  //Serial.print(" X2: ");
   Serial.print(datos[2]); 
-  Serial.print(" Y2: ");
+  Serial.print(",");
+  //Serial.print(" Y2: ");
   Serial.print(datos[3]);
-  Serial.print(" X3: ");
+  Serial.print(",");
+  //Serial.print(" X3: ");
   Serial.print(datos[4]); 
-  Serial.print(" Y3: ");
+  Serial.print(",");
+  //Serial.print(" Y3: ");
   Serial.print(datos[5]);
-  Serial.print(" X4: ");
+  Serial.print(",");
+  //Serial.print(" X4: ");
   Serial.print(datos[6]); 
-  Serial.print(" Y4: ");
+  Serial.print(",");
+  //Serial.print(" Y4: ");
   Serial.print(datos[7]);
-  Serial.print(" X5: ");
+  Serial.print(",");
+  //Serial.print(" X5: ");
   Serial.print(datos[8]); 
-  Serial.print(" Y5: ");
+  Serial.print(",");
+  //Serial.print(" Y5: ");
   Serial.print(datos[9]);
-  Serial.print(" X6: ");
+  Serial.print(",");
+  //Serial.print(" X6: ");
   Serial.print(datos[10]); 
-  Serial.print(" Y6: ");
+  Serial.print(",");
+  //Serial.print(" Y6: ");
   Serial.print(datos[11]);
-  Serial.print(" X7: ");
-  Serial.print(datos[12]); 
-  Serial.print(" Y7: ");
-  Serial.println(datos[13]);
+  Serial.print(",");
 
-  radio.write(datos, 28);
-
+  Serial.println(az_m_s2,2);
+  
+  //Serial.print(" X7: ");
+  //Serial.print(datos[12]); 
+  //Serial.print(",");
+  //Serial.print(" Y7: ");
+  //Serial.println(datos[13]);
+  
+  //radio.write(datos, 28);
+  
   delay(1);
-
+  
 }
 
 //funcion de variables
